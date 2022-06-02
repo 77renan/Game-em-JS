@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 627px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url("./imagens/fundogif.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 110px;
+    animation: pipe-animation 1.7s infinite linear;
+    transform: scaleX(-1);
+}
+
+.personagem{
+    width: 165px;
+    position: absolute;
+    bottom: 0;
+    
+}
+.jump{
+
+    animation: jump 500ms ease-out;
+}
+
+
+@keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+
+}
+
+@keyframes jump{
+
+    0%{
+        bottom: 0;
+    }
+    40%{
+    bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    65%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0%;
+    }
+}
